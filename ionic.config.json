@@ -1,0 +1,7 @@
+{
+  "name": "mygreenIONIC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
