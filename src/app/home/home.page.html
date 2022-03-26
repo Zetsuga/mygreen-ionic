@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+
+<ion-header [translucent]="false">
+  <div class="header">
+    <div class="zona-izq">
+        <div class="canvas-log">
+            <img src="../../../assets/img/nature.png">
+        </div>
+        <h1>MyGreen</h1>
+    </div>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <form class="formulario" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="contenedor_datos_input">
+      <div class="form">
+          <div class="tituloForm">
+              <h2>¡Bienvenido!</h2>
+              <p>Entra en tu cuenta para controlar tu explotación.</p>
+          </div>
+          <span>Introduce tu e-mail</span>
+          <div>
+              <input class="form-input" type="email" id="email-login" name="correo" [(ngModel)]="usuario.email" #correo="ngModel"
+              [ngClass]="{'is-invalid':correo.invalid && (correo.dirty || correo.touched)}" email required placeholder="  E-mail..." />
+              <div *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+                  <p *ngIf="correo.errors.required" class="advertencia">El correo es obligatorio</p>
+                  <p *ngIf="correo.errors.email" class="advertencia">El correo no es válido</p>
+              </div>
+          </div> 
+          <span>Introduce tu contraseña</span>
+          <div>
+              <input class="form-input" type="password" id="contraseña-login" name="password" [(ngModel)]="usuario.contrasenia" #password="ngModel"
+              [ngClass]="{'is-invalid':password.invalid && (password.dirty || password.touched)}" minlength="4" required placeholder="  Contraseña..." />
+              <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                  <p *ngIf="password.errors.required" class="advertencia">La contraseña es obligatoria</p>
+              </div>
+          </div>
+          <div id="boton-form" >
+              <button class="botonMyGreen" type="submit" [disabled]="!loginForm.valid" >ENVIAR</button>
+          </div>
+      </div>
+
+  </form>
   </div>
 </ion-content>

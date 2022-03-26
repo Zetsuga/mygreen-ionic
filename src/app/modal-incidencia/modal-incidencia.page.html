@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>INCIDENCIAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-textarea 
+              class="cajaTexto"
+              placeholder="  Deja tu incidencia aquí"
+              #texto>
+  </ion-textarea>
+  <ion-button class="botonmygreen2"
+              (click)="guardar(texto.value)" expand>
+              GUARDAR INCIDENCIA
+  </ion-button>
+  <ion-button class="botonmygreen2"
+              (click)="salir()" expand>
+              Cerrar
+  </ion-button>
+</ion-content>

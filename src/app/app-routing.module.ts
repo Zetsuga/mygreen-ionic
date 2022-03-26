@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tecnico-inicio',
+    loadChildren: () => import('./tecnico-inicio/tecnico-inicio.module').then( m => m.TecnicoInicioPageModule)
+  },
+  {
+    path: 'trabajador-inicio',
+    loadChildren: () => import('./trabajador-inicio/trabajador-inicio.module').then( m => m.TrabajadorInicioPageModule)
+  },
+  {
+    path: 'modal-incidencia',
+    loadChildren: () => import('./modal-incidencia/modal-incidencia.module').then( m => m.ModalIncidenciaPageModule)
+  },
 ];
 
 @NgModule({

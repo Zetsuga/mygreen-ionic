@@ -1,0 +1,46 @@
+
+<ion-header [translucent]="false">
+  <div class="header">
+    <div class="zona-izq">
+        <h1>MyGreen</h1>
+        <button 
+                class="botonDesconectar"
+                (click)="desconectar()">
+                Desconectar
+        </button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    
+      <button *ngIf="botonFormulario" class="botonMyGreen anchoEntero" type="button" (click)="entrada()">ENTRADA</button>
+      <button *ngIf="!botonFormulario" class="botonMyGreen anchoEntero" type="button" (click)="salida()">SALIDA</button>
+      <button class="botonMyGreen anchoEntero2" type="button" (click)="modalIncidencia()">GENERAR INCIDENCIA</button>
+
+    <div class="tareas">
+      <h3 class="tituloCard separacion">TAREAS ASIGNADAS</h3>
+      <div class="tareaPendiente" *ngFor="let tarea of tareas;let indice=index" (click)="cargarDatos(tarea.id_tarea,
+            tarea.prioridad,tarea.fecha,tarea.descripcion,indice)">
+          
+              <div class="lineaSeparacion">
+                  <hr>
+              </div>
+              <div class="caja">
+                  <div class="tarea-arriba">
+                      <p class="titulo-atera-arriba"><span class="tareaPrioridad {{tarea.prioridad}}">{{tarea.prioridad.toUpperCase()}}</span>
+                        <span class="tareaFecha">{{tarea.fecha|date:"dd-MM-YYYY"}}</span>
+                      </p>
+                  </div>
+                  <div class="tarea-abajo">
+                      <p class="tareaDescripcion">{{tarea.descripcion}}</p>
+                  </div>
+              </div>
+          
+      </div>
+
+  </div>
+  </div>
+</ion-content>
