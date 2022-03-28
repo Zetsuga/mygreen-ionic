@@ -1,64 +1,49 @@
 
-  .tareas {
-    
+  .tareas {   
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    margin: 50px 10px;
+    margin: 10px 15px;
     text-align: center;
-  }
-  
-  
+  }  
   .tareaPendiente {
     border-radius: 7px;
     box-shadow: var(--sombra);
     border: var(--borde);
     display: flex;
     flex-direction: column;
-    align-content: center;
-    margin-bottom: 20px;
+    // align-content: center;
+    margin:0px 5px 15px;
     background-color: white;
+  }  
+  .tareaPendiente:hover {
+    background-color: rgb(202, 202, 202);
   }
-  
+  .tituloCard{
+    color: var(--verdeSecundario);
+    margin-bottom: 15px;
+  }
   .caja {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  }
-  
-  .tareaPendiente:hover {
-    background-color: rgb(202, 202, 202);
-  }
-
+  }  
   .tarea_arriba{
       flex-direction: row;
       display: flex;
   }
-
   .titulo-atera-arriba{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding: 0 15px;
-  }
-  
+  }  
   .tareaPrioridad {
     font-family: var(--roboto);
     font-weight: 600;
     font-size: 20px;
     margin: 0;
-  }
-
-  .anchoEntero{
-    width: 99%;
-    margin: 20px 0;
-  }
-  
-  .anchoEntero2{
-    width: 99%;
-    margin: 10px 0;
-  }
-  
+  }  
   .tareaFecha {
     font-size: 20px;
     font-family: var(--lato);
@@ -68,31 +53,33 @@
     margin: 0;
     margin-bottom: 15px;
   }
+  span, p{
+    color: black;
+  }
   
   .urgente {
-    color: #da3232;
+    color: var(--rojowarning);
   }
   
   .media {
-    color: #ffc800c0;
+    color: var(--amarilloAdvertencia);
   }
   
   .baja {
     color: var(--verdePrincipal);
   }
   
-  .lineaSeparacion {
+  .boton-login{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+  .botones{
+    margin: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .lineaSeparacion hr {
-    width: 100%;
-    margin: 0;
-  }
-  
-  .separacion {
-    margin: 10px 0 10px 10px;
-  }
-  
+    flex-direction: column;
+    align-items: center;
+    gap: 15px
+}

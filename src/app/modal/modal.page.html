@@ -1,18 +1,20 @@
-<ion-header no-border>
-  <ion-toolbar>
-    <ion-title>{{fecha|date:"dd-MM-YYYY"}} <br> Tarea {{prioridad}}  </ion-title>
+<ion-header class="titulo" id="titulo">
+  <ion-toolbar class="tituloModal" id="tituloModal">
+    <ion-title>{{fecha|date:"dd-MM-YYYY"}} <br> TAREA {{prioridad}}  </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="cuerpo">
   <p>{{descripcion}}</p>
-  <ion-button class="botonmygreen2"
+  <div class="botones">
+    <button class="botonMyGreen"
               (click)="finalizar(id_tarea,indice)" expand>
-              Finalizar Tarea
-  </ion-button>
-  <ion-button class="botonmygreen2"
+              FINALIZAR TAREA
+  </button>
+  <button class="botonMyGreen"
               (click)="salir()" expand>
-              Cerrar
-  </ion-button>
+              CERRAR
+  </button>
+  </div>
 
 </ion-content>

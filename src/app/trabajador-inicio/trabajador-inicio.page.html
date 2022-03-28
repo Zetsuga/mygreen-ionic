@@ -2,12 +2,13 @@
 <ion-header [translucent]="false">
   <div class="header">
     <div class="zona-izq">
-        <h1>MyGreen</h1>
-        <button 
-                class="botonDesconectar"
-                (click)="desconectar()">
-                Desconectar
-        </button>
+      <div class="canvas-log">
+        <img src="../../../assets/img/nature.png">
+      </div>
+      <h1>MyGreen</h1>
+      <div class="zona-dcha" >
+        <a class="boton-login" title="logOut" (click)="desconectar()"><img  src="../../../assets/img/logout.png"></a>
+    </div>
     </div>
   </div>
 </ion-header>
@@ -16,18 +17,16 @@
 
   <div id="container">
     
-      <button *ngIf="botonFormulario" class="botonMyGreen anchoEntero" type="button" (click)="entrada()">ENTRADA</button>
-      <button *ngIf="!botonFormulario" class="botonMyGreen anchoEntero" type="button" (click)="salida()">SALIDA</button>
+    <div class="botones">
+      <button *ngIf="botonFormulario" class="botonMyGreen" type="button" (click)="entrada()">ENTRADA</button>
+      <button *ngIf="!botonFormulario" class="botonMyGreen" type="button" (click)="salida()">SALIDA</button>
       <button class="botonMyGreen anchoEntero2" type="button" (click)="modalIncidencia()">GENERAR INCIDENCIA</button>
+    </div>
 
     <div class="tareas">
-      <h3 class="tituloCard separacion">TAREAS ASIGNADAS</h3>
+      <h3 class="tituloCard">TAREAS ASIGNADAS</h3>
       <div class="tareaPendiente" *ngFor="let tarea of tareas;let indice=index" (click)="cargarDatos(tarea.id_tarea,
             tarea.prioridad,tarea.fecha,tarea.descripcion,indice)">
-          
-              <div class="lineaSeparacion">
-                  <hr>
-              </div>
               <div class="caja">
                   <div class="tarea-arriba">
                       <p class="titulo-atera-arriba"><span class="tareaPrioridad {{tarea.prioridad}}">{{tarea.prioridad.toUpperCase()}}</span>
