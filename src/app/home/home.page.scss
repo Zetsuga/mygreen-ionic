@@ -1,6 +1,6 @@
 .form{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   margin: 30px;
@@ -8,9 +8,8 @@
   box-shadow: var(--sombra);
   border: var(--borde);
   border-radius: 7px;
-  gap: .8vh;
+  gap: 2vh;
   background-color: white;
-  /* backdrop-filter: saturate(180%) blur(20px); */
 }
 
 span{
@@ -35,6 +34,8 @@ span{
   font-style: normal;
   font-weight: 500;
   font-size: 1.5em;
+  color: black;
+  text-align: center;
 }
 .tituloForm p{ 
   font-family: 'Lato';
@@ -42,4 +43,8 @@ span{
   font-weight: 400;
   font-size: 0.88em;
   color: black;
+  padding: 0 2em;
+}
+#boton-form{
+  margin: 3em;
 }
