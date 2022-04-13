@@ -1,6 +1,8 @@
 <ion-header class="titulo" id="titulo">
-  <ion-toolbar class="tituloModal" id="tituloModal">
-    <ion-title>{{fecha|date:"dd-MM-YYYY"}} <br> TAREA {{prioridad}}  </ion-title>
+  <ion-toolbar [ngClass]="{'urgente':'tituloModalRojo','media':'tituloModalAmarillo',
+  'baja':'tituloModalVerde'}[prioridad]"
+   id="tituloModal">
+    <ion-title class="tituloCabecera">{{fecha|date:"dd-MM-YYYY"}} <br> TAREA {{prioridad}}  </ion-title>
   </ion-toolbar>
 </ion-header>
 

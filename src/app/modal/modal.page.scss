@@ -1,6 +1,20 @@
-.tituloModal{
+.tituloModalVerde{
     --background: var(--verdePrincipal);
 }
+
+.tituloModalRojo{
+    --background: var(--rojowarning);
+}
+
+.tituloModalAmarillo{
+    --background: var(--amarilloAdvertencia);
+}
+
+.tituloCabecera{
+    --color:white;
+    text-align: center;
+}
+
 .cuerpo{
     display: flex;
     justify-content: center;
@@ -9,6 +23,8 @@
 p{
     text-align: center;
     color: var(--grisOscuro);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .botones{
     display: flex;
